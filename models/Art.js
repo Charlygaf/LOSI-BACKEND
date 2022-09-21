@@ -2,7 +2,6 @@ const { Model, DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
   class Art extends Model {}
-
   Art.init(
     {
       id: {
@@ -15,7 +14,8 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       description: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       imageUrl: {
         type: DataTypes.STRING,

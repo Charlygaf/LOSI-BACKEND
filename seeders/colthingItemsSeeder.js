@@ -3,11 +3,29 @@ module.exports = async () => {
   try {
     const clothingItems = [
       {
-        title: "Gorro Lana Goorin On The Hunt Gris",
+        title: "Gorro charly",
         description: "Gorro de lana en color gris, con estampa bordada.",
         imageUrl:
-          "https://f.fcdn.app/imgs/2876b2/laisla.com.uy/isl/7b65/webp/catalogo/107-0210-GRY107-0210-GRY1/2000-2000/gorro-lana-goorin-on-the-hunt-gorro-lana-goorin-on-the-hunt.jpg",
+          "https://cdn.shopify.com/s/files/1/0705/2433/products/WARRENOLIVEPANTFRONT_1024x1024.jpg?v=1658433664",
         price: 2190,
+        stock: true,
+        clothingTypeId: 5,
+      },
+      {
+        title: "Gorro thom",
+        description: "Gorro de lana en color gris, con estampa bordada.",
+        imageUrl:
+          "https://cdn.shopify.com/s/files/1/0705/2433/products/MIAMIBLACKTEE_1024x1024.jpg?v=1658434698",
+        price: 2100,
+        stock: true,
+        clothingTypeId: 5,
+      },
+      {
+        title: "Gorro flor",
+        description: "Gorro de lana en color gris, con estampa bordada.",
+        imageUrl:
+          "https://cdn.shopify.com/s/files/1/0705/2433/products/NAMASTEWHITETEE_1024x1024.jpg?v=1658434859",
+        price: 2100,
         stock: true,
         clothingTypeId: 5,
       },

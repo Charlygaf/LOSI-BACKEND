@@ -12,12 +12,12 @@ const sequelize = new Sequelize(
 );
 
 const User = require("./User")(sequelize, Model, DataTypes);
-const Art = require("./Art")(sequelize, Model, DataTypes);
 const Video = require("./Video")(sequelize, Model, DataTypes);
 const ClothingType = require("./ClothingType")(sequelize, Model, DataTypes);
 const ClothingItem = require("./ClothingItem")(sequelize, Model, DataTypes);
 const SkatewareType = require("./SkatewareType")(sequelize, Model, DataTypes);
 const SkateItem = require("./SkateItem")(sequelize, Model, DataTypes);
+const Art = require("./Art")(sequelize, Model, DataTypes);
 
 ClothingType.hasMany(ClothingItem);
 ClothingItem.belongsTo(ClothingType);
@@ -31,6 +31,6 @@ module.exports = {
   ClothingType,
   SkateItem,
   SkatewareType,
-  Art,
   Video,
+  Art,
 };

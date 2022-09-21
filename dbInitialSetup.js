@@ -8,7 +8,7 @@ module.exports = async () => {
   await require("./seeders/clothingTypesSeeder")();
   await require("./seeders/colthingItemsSeeder")();
   await require("./seeders/skatewareTypesSeeder")();
+  await require("./seeders/artsSeeder")();
   await require("./seeders/skateItemsSeeder")();
   await require("./seeders/videosSeeder")();
-  await require("./seeders/artsSeeder")();
 };
