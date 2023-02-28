@@ -34,6 +34,10 @@ module.exports = (sequelize) => {
         type: DataTypes.DATE,
         allowNull: false,
       },
+      discount: {
+        type: DataTypes.TINYINT,
+        allowNull: false,
+      },
     },
     {
       sequelize,

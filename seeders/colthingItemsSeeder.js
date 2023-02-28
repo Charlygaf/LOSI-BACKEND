@@ -10,6 +10,7 @@ module.exports = async () => {
         price: 2190,
         stock: true,
         clothingTypeId: 5,
+        discount: 0.8,
       },
       {
         title: "Gorro thom",
@@ -19,6 +20,7 @@ module.exports = async () => {
         price: 2100,
         stock: true,
         clothingTypeId: 5,
+        discount: 0.8,
       },
       {
         title: "Gorro flor",
@@ -28,6 +30,7 @@ module.exports = async () => {
         price: 2100,
         stock: true,
         clothingTypeId: 5,
+        discount: 0.8,
       },
     ];
 
