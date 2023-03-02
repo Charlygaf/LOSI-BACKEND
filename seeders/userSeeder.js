@@ -4,16 +4,16 @@ module.exports = async () => {
   try {
     const users = [
       {
-        firstname: "Admin",
-        lastname: "Admin",
-        email: "admin@mail.com",
+        firstname: "Carlos",
+        lastname: "Garcia Arocena",
+        email: "charlygaf@gmail.com",
         password: "1234",
         isAdmin: true,
       },
       {
-        firstname: "Admin2",
-        lastname: "Admin2",
-        email: "admin2@mail.com",
+        firstname: "thomas",
+        lastname: "hughes",
+        email: "thomih44@gmail.com ",
         password: "1234",
       },
       {
@@ -21,13 +21,14 @@ module.exports = async () => {
         lastname: "González",
         email: "pepe@mail.com",
         password: "1234",
-        isAdmin: true,
+        isAdmin: false,
       },
       {
-        firstname: "User",
+        firstname: "juan",
         lastname: "User",
-        email: "user@mail.com",
+        email: "juan@mail.com",
         password: "1234",
+        isAdmin: false,
       },
     ];
 

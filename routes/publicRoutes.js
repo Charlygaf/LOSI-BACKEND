@@ -1,4 +1,3 @@
-const { response } = require("express");
 const express = require("express");
 const publicRouter = express.Router();
 const {
@@ -8,9 +7,16 @@ const {
 } = require("../controllers/publicController");
 
 // Rutas del Públicas:
-// ...
+
+// Content
 publicRouter.get("/content", showContent);
+
+//Product
 publicRouter.get("/products", showProducts);
+
+//Arts
 publicRouter.get("/arts", showArts);
+
+//Auth
 
 module.exports = publicRouter;

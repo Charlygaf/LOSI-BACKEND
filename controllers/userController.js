@@ -1,35 +1,48 @@
-const { User } = require("../models");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const User = require("../models/User");
 
-// Display a listing of the resource.
-async function index(req, res) {}
+const create = (req, res, next) => {
+  User.create(
+    { name: req.body.name, email: req.body.email, password: req.body.password },
+    function (err, result) {
+      if (err) next(err);
+      else
+        res.json({
+          status: "success",
+          message: "User added successfully!!!",
+          data: null,
+        });
+    }
+  );
+};
 
-// Display the specified resource.
-async function show(req, res) {}
-
-// Show the form for creating a new resource
-async function create(req, res) {}
-
-// Store a newly created resource in storage.
-async function store(req, res) {}
-
-// Show the form for editing the specified resource.
-async function edit(req, res) {}
-
-// Update the specified resource in storage.
-async function update(req, res) {}
-
-// Remove the specified resource from storage.
-async function destroy(req, res) {}
-
-// Otros handlers...
-// ...
+const authenticate = (req, res, next) => {
+  User.findOne({ email: req.body.email }, function (err, userInfo) {
+    if (err) {
+      next(err);
+    } else {
+      if (bcrypt.compareSync(req.body.password, userInfo.password)) {
+        const token = jwt.sign({ id: userInfo._id }, req.app.get("secretKey"), {
+          expiresIn: "1h",
+        });
+        res.json({
+          status: "success",
+          message: "user found!!!",
+          data: { user: userInfo, token: token },
+        });
+      } else {
+        res.json({
+          status: "error",
+          message: "Invalid email/password!!!",
+          data: null,
+        });
+      }
+    }
+  });
+};
 
 module.exports = {
-  index,
-  show,
   create,
-  store,
-  edit,
-  update,
-  destroy,
+  authenticate,
 };
