@@ -6,13 +6,11 @@ module.exports = async () => {
       {
         title: "Losi 1 Año",
         description: "Losi Video. 1 año",
-
         youtubeUrl: "https://www.youtube.com/watch?v=MYSP8-rhnSk",
       },
       {
         title: "LOSI x MAURO PAIRET",
         description: "Maurito Buceo Bowl",
-
         youtubeUrl: "https://www.youtube.com/watch?v=oF93NaqmtSc",
       },
     ];

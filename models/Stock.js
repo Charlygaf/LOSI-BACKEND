@@ -1,43 +1,34 @@
 const { Model, DataTypes } = require("sequelize");
 module.exports = (sequelize) => {
-  class SkateItem extends Model {}
-  SkateItem.init(
+  class Stock extends Model {}
+  Stock.init(
     {
       id: {
         type: DataTypes.BIGINT.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
       },
-      title: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      description: {
+      size: {
         type: DataTypes.TEXT,
         allowNull: false,
       },
-      imageUrl: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      price: {
+      stock: {
         type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
-      stock: {
-        type: DataTypes.BOOLEAN,
+      price: {
+        type: DataTypes.DECIMAL(10, 2),
         allowNull: false,
-        default: true,
       },
-      createdAt: {
-        type: DataTypes.DATE,
+      discount: {
+        type: DataTypes.TINYINT,
         allowNull: false,
       },
     },
     {
       sequelize,
-      modelName: "SkateItem",
+      modelName: "Stock",
     }
   );
-  return SkateItem;
+  return Stock;
 };

@@ -1,18 +1,19 @@
-const { ClothingType } = require("../models");
+const { Category } = require("../models");
 module.exports = async () => {
   try {
-    const clothingTypes = [
+    const categories = [
       { typeName: "Pantalones" },
       { typeName: "Remeras" },
       { typeName: "Camperas" },
       { typeName: "Buzos" },
       { typeName: "Accesorios" },
       { typeName: "Camisas" },
+      { typeName: "Decks", skateItem: true },
     ];
 
-    await ClothingType.bulkCreate(clothingTypes);
-    console.log("[Seeders] Las clothingTypes fueron creadas");
+    await Category.bulkCreate(categories);
+    console.log("[Seeders] Las categories fueron creadas");
   } catch (error) {
-    console.log("clothingTypes error");
+    console.log("categories error");
   }
 };

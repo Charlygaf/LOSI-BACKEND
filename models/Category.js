@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  class ClothingType extends Model {}
-  ClothingType.init(
+  class Category extends Model {}
+  Category.init(
     {
       id: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -13,11 +13,16 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      skateItem: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        allowNull: false,
+      },
     },
     {
       sequelize,
-      modelName: "clothingType",
+      modelName: "Category",
     }
   );
-  return ClothingType;
+  return Category;
 };

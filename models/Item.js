@@ -1,8 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  class ClothingItem extends Model {}
-  ClothingItem.init(
+  class Item extends Model {}
+  Item.init(
     {
       id: {
         type: DataTypes.BIGINT.UNSIGNED,
@@ -21,28 +21,16 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      price: {
-        type: DataTypes.BIGINT,
-        allowNull: false,
-      },
-      stock: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        default: true,
-      },
+
       createdAt: {
         type: DataTypes.DATE,
-        allowNull: false,
-      },
-      discount: {
-        type: DataTypes.TINYINT,
         allowNull: false,
       },
     },
     {
       sequelize,
-      modelName: "clothingItem",
+      modelName: "Item",
     }
   );
-  return ClothingItem;
+  return Item;
 };
