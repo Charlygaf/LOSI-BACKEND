@@ -16,14 +16,6 @@ module.exports = (sequelize) => {
         type: DataTypes.BIGINT.UNSIGNED,
         allowNull: false,
       },
-      price: {
-        type: DataTypes.DECIMAL(10, 2),
-        allowNull: false,
-      },
-      discount: {
-        type: DataTypes.TINYINT,
-        allowNull: false,
-      },
     },
     {
       sequelize,

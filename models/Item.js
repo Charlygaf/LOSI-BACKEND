@@ -26,6 +26,14 @@ module.exports = (sequelize) => {
         type: DataTypes.DATE,
         allowNull: false,
       },
+      price: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false,
+      },
+      discount: {
+        type: DataTypes.TINYINT,
+        allowNull: false,
+      },
     },
     {
       sequelize,

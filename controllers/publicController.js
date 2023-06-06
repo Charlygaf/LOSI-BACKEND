@@ -1,6 +1,5 @@
-const { Item, User, Video, Art } = require("../models");
-const { Sequelize, Op } = require("sequelize");
-const Stock = require("../models/Stock");
+const { Item, User, Stock, Video, Art } = require("../models");
+const { Op } = require("sequelize");
 
 // Display a listing of the resource.
 async function index(req, res) {}
@@ -34,10 +33,11 @@ const showProducts = async () => {
 const showProductDetails = async (id) => {
   let data = await Item.findOne({
     where: { id: id },
-    include: { model: Stock },
+    include: [Stock],
   });
 
-  console.log(data);
+  data?.Stocks.map((stock) => console.log(stock));
+
   return data;
 };
 async function showArts(req, res) {

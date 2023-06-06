@@ -6,96 +6,84 @@ module.exports = async () => {
         id: 1,
         size: "L",
         stock: 25,
-        price: 2000,
-        discount: 0,
+
         ItemId: 1,
       },
       {
         id: 2,
         size: "L",
         stock: 30,
-        price: 2000,
-        discount: 0,
+
         ItemId: 2,
       },
       {
         id: 3,
         size: "L",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 3,
       },
       {
         id: 4,
         size: "L",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 4,
       },
       {
         id: 5,
         size: "L",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 5,
       },
       {
         id: 6,
         size: "L",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 6,
       },
       {
         id: 7,
         size: "L",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 7,
       },
       {
         id: 8,
         size: "XL",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 1,
       },
       {
         id: 9,
         size: "XL",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 2,
       },
       {
         id: 10,
         size: "XL",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 3,
       },
       {
         id: 11,
         size: "XL",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 4,
       },
       {
         id: 12,
         size: "XL",
         stock: 10,
-        price: 2000,
-        discount: 0,
+
         ItemId: 5,
       },
     ];
